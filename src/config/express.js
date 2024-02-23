@@ -4,7 +4,7 @@ import router from '../routers/index.js'
 import {} from "dotenv/config";
 import db from "./firebase.js";
 
-const port =  8000
+const port =  process.env.PORT
 
 const configExpressApp = async (app) => {
 
