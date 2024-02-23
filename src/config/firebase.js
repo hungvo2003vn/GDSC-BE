@@ -22,18 +22,4 @@ const firebaseApp = initializeApp({
 
 const db = getFirestore(firebaseApp);
 
-async function connect() {
-  try {
-    const collections = await db.listCollections();
-    if (collections.length === 0) {
-      console.log('Connected to Firestore successfully (no collections found)');
-    } else {
-      console.log('Connected to Firestore successfully');
-    }
-  } catch (error) {
-    console.error('Failed to connect to Firestore:', error);
-    throw error;
-  }
-}
-
-export default { connect };
+export default db;
